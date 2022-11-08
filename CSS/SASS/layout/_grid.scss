@@ -1,0 +1,32 @@
+*{
+    @include prefixes(box-sizing,border-box);
+    @include prefixes(padding,0);
+    @include prefixes(margin,0);
+    @include prefixes(list-style,none);
+    font-family:  Tahoma, sans-serif;
+    text-transform: capitalize;
+}
+
+.container {
+    @include breakpoint(mobile){
+        max-width: 90%;
+        padding:0px 5px;
+        margin: 50px auto;
+
+    }
+    @include breakpoint(small-screen){
+        max-width: 90%;
+        margin: 50px auto;
+        padding:0px 10px;
+    }
+    @include breakpoint(mid-screen){
+        max-width: 80%;
+        margin: 50px auto;
+        padding:0px 10px;
+    }
+    @include breakpoint(large-screen){
+        max-width: 70%;
+        margin: 50px auto;
+        padding:0px 10px;
+    }
+}
