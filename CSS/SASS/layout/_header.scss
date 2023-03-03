@@ -1,0 +1,47 @@
+.header{
+    border-bottom: 1px solid $sec-color;
+    .container{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint (mobile){
+            flex-wrap: wrap;
+            justify-content: center;
+             gap:20px            
+        }
+        @include breakpoint (small-screen){
+            flex-wrap: wrap;
+            justify-content: center;
+             gap:20px
+        } 
+
+        @include breakpoint (mid-screen){
+            flex-wrap: wrap;
+            justify-content: center;
+             gap:20px
+        }
+        .left-area{
+            h3{
+                font-size:24px;
+                margin-bottom: 10px;
+            }
+            p{
+                color: #777;
+            }
+        }
+        .right-area{
+            ul{ display: flex;
+                gap: 30px;
+                background-color: $main-color;
+                padding: 20px 15px;
+                border-radius: 10px;
+                li{
+                    color: white;
+                    cursor: pointer;
+
+                }
+            }
+        }
+    }
+}

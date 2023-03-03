@@ -1,0 +1,29 @@
+
+@mixin breakpoint($point){
+    @if $point == mobile{
+        @media (max-width: 767px){
+         @content;  
+        }
+    } 
+    @else if $point == small-screen {
+        @media (min-width: 768px) and (max-width:991px){
+         @content;  
+        }
+    } 
+    @else if $point == mid-screen {
+        @media (min-width: 992px) and (max-width:1199px){
+         @content;  
+        }
+    } 
+    @else if $point == large-screen {
+        @media (min-width: 1200px){
+         @content;  
+        }
+    } 
+}
+@mixin prefixes($prop,$value) {
+    #{"-webkit-" + $prop}:$value;
+    #{"-o-" + $prop}:$value;
+    #{"-moz-" + $prop}:$value;
+    #{$prop}:$value;
+}
